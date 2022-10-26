@@ -1,0 +1,28 @@
+Create a working directory
+sudo mkdir -p /opt/terraform
+cd /opt/terraform
+
+Download Terraform from Hasicorp website
+sudo wget https://releases.hashicorp.com/terraform/1.3.1/terraform_1.3.1_linux_386.zip
+
+Install unzip utility
+sudo apt-get install unzip -y
+
+Unzip Terraform Zip file
+sudo unzip terraform_1.3.1_linux_386.zip
+ 
+Add terraform to PATH
+sudo mv /opt/terraform/terraform /usr/bin/
+ 
+Verify Terraform version
+terraform -version
+this should show version of Terraform.
+ 
+Terraform v1.3.1
+
+
+
+main.tf ---- resources like ec2, security group, ami, loadbalancer, autoscaling
+variables.tf -  values
+providers.tf - environment aws, Azure, GCP
+output.tf - feed some output
